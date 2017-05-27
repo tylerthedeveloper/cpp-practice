@@ -8,10 +8,9 @@ int main() {
 	cin >> num;
 	
 	bool b = true;
-	int min = 0;	
-	int max = 100;
-	int guess = max / 2;	
-	while(b) {
+	int min = 0,  max = 100, guess = max / 2;	
+
+	do {
 		if (num == guess) {
 			b = false;
 			break;
@@ -28,8 +27,7 @@ int main() {
 			max = guess;
 		}
 		guess = (rand()%(max-min + 1)) + min;
-
-	}
+	} while (b);
 
 
 	cout << "Your number is: " << num;
